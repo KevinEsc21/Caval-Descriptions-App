@@ -1,0 +1,53 @@
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.division{
+    border: 1px solid #19a58e;
+    width: 81%;
+    margin-top: 1.5rem;
+}
+
+.preview{
+    height: 10rem;
+}
+
+.preview-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 81%;
+    margin-top: 1rem;
+}
+
+.button{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    background-color: #e4e6eb;
+    color: #333333;
+}
+
+.button:hover{
+    background-color: #19a58e;
+    font-weight: 800;   
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.copy{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.clear{
+    border-radius: 0.5rem 0 0 0.5rem; 
+    margin-right: 0.5%;
+}
