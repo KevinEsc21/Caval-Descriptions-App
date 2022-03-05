@@ -42,16 +42,28 @@ const PreviewArea = ({data, setData}) => {
                 <button
                     class="copy button"
                     onClick={()=>{
-                        const description = document.querySelector(".preview");
-                        navigator.clipboard.writeText(description.value);
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Descripción copiada',
-                            showConfirmButton: false,
-                            timer: 2000,
-                            background: '#3a3b3c',
-                            color: '#E4E6EB'
-                        })
+                        if(data.title === "" ||data.price === ""){
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Descripción no copiada',
+                                text: 'Por favor, complete todos los campos requeridos',
+                                showConfirmButton: false,
+                                timer: 2500,
+                                background: '#3a3b3c',
+                                color: '#E4E6EB'
+                            })
+                        }else{
+                            const description = document.querySelector(".preview");
+                            navigator.clipboard.writeText(description.value);
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Descripción copiada',
+                                showConfirmButton: false,
+                                timer: 2000,
+                                background: '#3a3b3c',
+                                color: '#E4E6EB'
+                            })
+                        }
                     }}
                 >
                     Copiar
