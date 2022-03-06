@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Caval-Descriptions-App/static/css/main.e538a70c.css",
-    "main.js": "/Caval-Descriptions-App/static/js/main.1b5572a8.js",
+    "main.css": "/Caval-Descriptions-App/static/css/main.bfe5c2a4.css",
+    "main.js": "/Caval-Descriptions-App/static/js/main.8005fa02.js",
     "static/media/logo.png": "/Caval-Descriptions-App/static/media/logo.3be99e03261b3bd222d9.png",
     "index.html": "/Caval-Descriptions-App/index.html",
-    "main.e538a70c.css.map": "/Caval-Descriptions-App/static/css/main.e538a70c.css.map",
-    "main.1b5572a8.js.map": "/Caval-Descriptions-App/static/js/main.1b5572a8.js.map"
+    "main.bfe5c2a4.css.map": "/Caval-Descriptions-App/static/css/main.bfe5c2a4.css.map",
+    "main.8005fa02.js.map": "/Caval-Descriptions-App/static/js/main.8005fa02.js.map"
   },
   "entrypoints": [
-    "static/css/main.e538a70c.css",
-    "static/js/main.1b5572a8.js"
+    "static/css/main.bfe5c2a4.css",
+    "static/js/main.8005fa02.js"
   ]
 }
