@@ -27,7 +27,7 @@ const PreviewArea = ({data, setData}) => {
                     "\n." +
                     "\n." +
                     "\n." +
-                    "\n#ElSalvador #sivar #mascarillas #promociones."
+                    "\n#ElSalvador #sivar #mascarillas #promociones"
                 }
                 >
                 </textarea>
