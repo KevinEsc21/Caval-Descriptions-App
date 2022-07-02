@@ -3,44 +3,41 @@ import Swal from 'sweetalert2'
 import './previewArea.css';
 
 const PreviewArea = ({data, setData}) => {
-    console.log(data.title);
+    const hashtagsArray = data.hashtag.replace(/\s+/g, '').split(',');
+    const newHashtags = hashtagsArray.map(hashtag => `#${hashtag}`).join(' ');
     return (
         <section>
             <span className="division"></span>
-            <div class="info container">
-                <label for="info">Previsualización de descripción</label>
+            <div className="info container">
+                <label htmlFor="info">Previsualización de descripción</label>
                 <textarea
-                class="preview"
-                readonly={true}
+                className="preview"
+                readOnly={true}
                 value={
-                    "✅" +
-                    data.title +
-                    (data.info && "\n") +
-                    data.info +
-                    "\nPrecio: $" +
-                    data.price +
-                    (data.promo && "\nPromoción: ") +
-                    data.promo +
-                    "\n🤳Pedidos por dm o a nuestro Whatsapp 6436-3746" +
-                    "\n🚚Entregas en San Salvador" +
-                    "\n😉Si desea más información, ¡estamos a la orden!" +
+                    `✅ ${data.title}`+
+                    (data.info && `\n✨ ${data.info}`) +
+                    `\n💵 $${data.price}\n` +
+                    (data.promo && `\n🔥PROMOCIÓN\n ${data.promo}\n`) +
+                    "\n🤳 Pedidos por dm o a nuestro Whatsapp 6436-3746" +
+                    "\n🚚 Entregas en San Salvador" +
+                    "\n😉 Si desea más información, ¡estamos a la orden!" +
                     "\n." +
                     "\n." +
                     "\n." +
-                    "\n#ElSalvador #sivar #mascarillas #promociones"
+                    `\n#ElSalvador #sivar #promociones ${newHashtags}`
                 }
                 >
                 </textarea>
             </div>
-            <div class="preview-controls">
+            <div className="preview-controls">
                 <button
-                    class="clear button"
-                    onClick={()=>setData({title: "",info:"",price: "",promo: ""})}
+                    className="clear button"
+                    onClick={()=>setData({title: "",info:"",price: "",promo: "", hashtag: ""})}
                 >
                     Limpiar
                 </button>
                 <button
-                    class="copy button"
+                    className="copy button"
                     onClick={()=>{
                         if(data.title === "" ||data.price === ""){
                             Swal.fire({
