@@ -5,32 +5,30 @@ const Form = ({data, setData}) => {
 
     return (
         <div className="form">
-            <div class="title container">
-                <label for="title">Titulo</label>
+            <div className="title container">
+                <label htmlFor="title">Titulo</label>
                 <input
                     type="text"
                     id="title"
                     name="title"
                     value={data.title}
                     onChange={(e) => setData({...data, title: e.target.value})}
-                    placeholder="Ej. Mascarilla quirurgica"
+                    placeholder="Ej. Mascarilla quirúrgica"
                 />
             </div>
-            <div class="info container">
-                <label for="info">Información adicional</label>
+            <div className="info container">
+                <label htmlFor="info">Información adicional</label>
                 <textarea
                     id="info"
                     name="info"
                     value={data.info}
                     onChange={(e) => setData({...data, info: e.target.value})}
                     placeholder="(Opcional) Ej. Variantes en colores, tamaños, tipo etc."
-                    
                 >
-
                 </textarea>
             </div>
-            <div class="price container">
-                <label for="price">Precio</label>
+            <div className="price container">
+                <label htmlFor="price">Precio</label>
                 <input
                     type="number"
                     id="price"
@@ -40,8 +38,8 @@ const Form = ({data, setData}) => {
                     placeholder="Ej. 3.00"
                 />
             </div>
-            <div class="promo container">
-                <label for="promo">Promoción</label>
+            <div className="promo container">
+                <label htmlFor="promo">Promoción</label>
                 <input
                     type="text"
                     id="promo"
@@ -49,6 +47,17 @@ const Form = ({data, setData}) => {
                     value={data.promo}
                     onChange={(e) => setData({...data, promo: e.target.value})}
                     placeholder="(Opcional) Ej. De 2 cajas en adelante $2.50"
+                />
+            </div>
+            <div className="hashtag container">
+                <label htmlFor="promo">Hashtags</label>
+                <input
+                    type="text"
+                    id="hashtag"
+                    name="hashtag"
+                    value={data.hashtag}
+                    onChange={(e) => setData({...data, hashtag: e.target.value})}
+                    placeholder="(Opcional) Ej. Mascarillas, Salud"
                 />
             </div>
         </div>

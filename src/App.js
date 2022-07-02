@@ -10,6 +10,7 @@ function App() {
         info: "",
         price: "",
         promo: "",
+        hashtag: "",
     });
 
     return (
